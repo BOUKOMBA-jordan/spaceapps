@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.App-header {
+  padding: 20px;
+}
+
+.App-title {
+  font-size: 36px;
+  margin: 20px 0;
+  color: #0056b3; /* Couleur du texte */
+}
+
+.App-description {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+/* Ajout d'un style pour le conteneur du cours */
+.cours-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cours-section {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e6f7ff;
+  border-left: 5px solid #0056b3;
+}
+
+.cours-section h2 {
+  font-size: 22px;
+  color: #0056b3;
+}

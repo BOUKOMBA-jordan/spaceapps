@@ -1,0 +1,144 @@
+/* Styles de base pour les cartes uniformisées */
+.card-uniform {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  text-align: left;
+  flex: 0 0 calc(50% - 20px); /* Chaque carte prend 50% de la largeur, moins un espacement */
+  margin: 10px; /* Espacement autour des cartes */
+}
+
+.card-uniform:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Style spécifique pour les images dans les cartes multimédias */
+.media-card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style pour les vidéos YouTube */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+/* Ajustement de l'iframe pour les vidéos */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Section des cartes (pour informations et médias) */
+.card-section, .media-section {
+  display: flex;
+  justify-content: flex-start; /* Ajuste l'alignement à gauche */
+  flex-wrap: wrap; /* Permet d'avoir plusieurs lignes */
+  margin: 0 -10px; /* Équilibre l'espacement */
+}
+
+/* Responsiveness pour les petits écrans */
+@media (max-width: 768px) {
+  .card-section, .media-section {
+    flex-direction: column; /* Passe à une colonne pour les petits écrans */
+  }
+
+  .card-uniform {
+    flex: 0 0 100%; /* Chaque carte prend 100% de la largeur */
+    margin-bottom: 20px; /* Espacement entre les cartes */
+  }
+}
+
+
+.home-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007bff; /* Couleur du texte */
+}
+
+.home-description {
+  font-size: 1.2rem;
+  color: #555; /* Couleur du texte */
+}
+
+/* Ajout de styles pour les cartes */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  color: #666;
+}
+@media (max-width: 992px) {
+  .card-section, .media-section {
+    flex-direction: column; /* Empile les cartes sur les écrans plus petits */
+  }
+}
+.video-wrapper {
+  display: flex;
+  justify-content: center; /* Centre la vidéo horizontalement */
+}
+
+.video-player {
+  width: 70%; /* Réduit la vidéo à 70% de la largeur */
+  height: auto; /* Ajuste la hauteur automatiquement en fonction de la largeur */
+}
+
+
+
+/* Styles pour les effets d'émission de gaz */
+.gas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.gas {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite;
+}
+
+.gas:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 5%;
+}
+
+.gas:nth-child(2) {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  right: 10%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+}

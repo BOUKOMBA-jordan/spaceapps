@@ -1,0 +1,20 @@
+/* TeamCarousel.css */
+.team-carousel-container {
+    margin-top: 2rem;
+  }
+  
+  .team-carousel-container img {
+    height: 300px; /* Ajustez la hauteur des images */
+    object-fit: cover; /* Assurez-vous que les images conservent leur ratio */
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Légère transparence pour le texte */
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .carousel-item {
+    transition: transform 0.5s ease; /* Ajoutez une animation lors du changement d'image */
+  }
+  

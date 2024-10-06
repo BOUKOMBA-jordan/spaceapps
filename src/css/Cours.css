@@ -1,0 +1,20 @@
+.cours {
+    padding: 20px; /* Espacement autour du contenu */
+    background-color: #ffffff; /* Couleur de fond blanche */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin: 20px 0; /* Espacement vertical */
+  }
+  
+  .cours-title {
+    font-size: 1.8rem; /* Taille de police du titre */
+    color: #007bff; /* Couleur du titre */
+    margin-bottom: 15px; /* Espacement en bas du titre */
+  }
+  
+  .cours-details p {
+    font-size: 1rem; /* Taille de police des détails */
+    color: #333; /* Couleur du texte des détails */
+    margin-bottom: 10px; /* Espacement en bas des paragraphes */
+  }
+  

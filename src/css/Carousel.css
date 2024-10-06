@@ -1,0 +1,22 @@
+.carousel {
+    height: 500px; /* Ajustez la hauteur selon vos besoins */
+  }
+  
+  .carousel-item img {
+    height: 120%; /* S'assure que les images remplissent la hauteur du carousel */
+    object-fit: cover; /* Maintient la proportion des images */
+    width: 100%; /* Assure que les images remplissent la largeur du carousel */
+    border-radius: 10px; /* Arrondit les coins des images */
+  }
+  
+
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 17, 255, 0.884); /* Change la couleur des flèches */
+    border-radius: 50%; /* Optionnel: rend les flèches rondes */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(248, 29, 0, 0.8); /* Couleur plus foncée au survol */
+}

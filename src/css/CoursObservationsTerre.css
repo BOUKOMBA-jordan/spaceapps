@@ -1,0 +1,212 @@
+/* CoursObservationsTerre.css */
+
+/* Importation d'une police Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Variables CSS pour les couleurs */
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --color-primary: #2980b9;
+  --color-secondary: #34495e;
+  --color-tertiary: #555;
+  --color-background: #f4f4f4;
+  --color-card-bg: #f9f9f9;
+  --color-card-hover: #d3e0ea;
+}
+
+/* Taille de police globale */
+body {
+  font-family: var(--font-family);
+  font-size: 32px; /* Augmenter la taille globale de la police */
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: var(--color-background);
+}
+
+/* Conteneur principal */
+.cours-container {
+  max-width: 1200px; /* Largeur maximale */
+  margin: auto;
+  padding: 20px; /* Ajoute du padding pour donner de l'espace à l'intérieur du cadre */
+  background-color: white; /* Couleur de fond blanche */
+  border-radius: 10px; /* Coins arrondis pour un style plus doux */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+}
+
+/* Titres */
+.cours-title, .cours-subtitle, .section-title, .section-subtitle {
+  text-align: center;
+  animation: fadeIn 1s ease; /* Animation de fondu */
+}
+
+.cours-title {
+  font-size: 3rem; /* Augmenter la taille du titre */
+  color: var(--color-secondary);
+  margin-bottom: 10px;
+}
+
+.cours-subtitle, .section-title {
+  font-size: 2rem; /* Augmenter la taille du sous-titre */
+  color: var(--color-secondary);
+  margin-bottom: 20px;
+}
+
+.section-title {
+  color: var(--color-primary);
+}
+
+.section-subtitle {
+  font-size: 1.5rem; /* Augmenter la taille du sous-titre de section */
+  color: #7f8c8d; /* Couleur grisée */
+}
+
+/* Introduction */
+.cours-introduction {
+  margin-bottom: 20px;
+  font-size: 1.2rem; /* Augmenter la taille du texte d'introduction */
+  color: var(--color-tertiary);
+}
+
+/* Vidéo */
+.video-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.video-container iframe {
+  width: 100%; /* Prendre toute la largeur disponible */
+  height: 500px; /* Augmenter la hauteur si nécessaire */
+}
+
+.video-title {
+  font-size: 2rem; /* Augmenter la taille du titre de vidéo */
+  margin-bottom: 10px;
+  animation: pulse 1.5s infinite; /* Animation de pulsation */
+}
+
+/* Détails du cours */
+.cours-details {
+  font-size: 1.1rem; /* Augmenter la taille des détails du cours */
+  margin-bottom: 20px;
+  color: #333; /* Couleur sombre */
+}
+
+/* Sections */
+.cours-section {
+  margin-bottom: 30px; /* Espacement entre les sections */
+  padding: 15px; /* Espacement intérieur */
+  border: 1px solid #ddd; /* Bordure légère */
+  border-radius: 5px; /* Coins arrondis */
+  background-color: var(--color-card-bg); /* Fond légèrement grisé */
+  transition: background-color 0.3s; /* Transition pour le changement de couleur */
+}
+
+.cours-section:hover {
+  background-color: var(--color-card-hover); /* Couleur au survol */
+}
+
+/* Cartes d'images */
+.image-cards {
+  display: flex;
+  flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+  justify-content: space-between; /* Espacement entre les cartes */
+  gap: 20px; /* Espacement entre les cartes */
+}
+
+.image-card {
+  flex: 1 1 calc(45% - 20px); /* Prend 45% de largeur avec un espacement */
+  padding: 15px;
+  background: white; /* Fond blanc */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  overflow: hidden; /* Pour ne pas laisser les éléments dépasser */
+  transition: transform 0.3s; /* Transition pour l'animation */
+}
+
+.image-card:hover {
+  transform: scale(1.05); /* Zoom au survol */
+}
+
+.image-card img {
+  max-width: 100%; /* Prend toute la largeur */
+  height: auto; /* Maintient le ratio d'aspect */
+  border-radius: 5px; /* Coins arrondis pour les images */
+}
+
+.image-card p {
+  padding: 10px; /* Espacement intérieur pour la description */
+  color: var(--color-tertiary); /* Couleur de texte douce */
+}
+
+/* Listes */
+ul {
+  margin: 10px 0; /* Marge au-dessus et en dessous */
+  padding-left: 20px; /* Indentation à gauche */
+}
+
+/* Styles des icônes */
+.cours-details p {
+  display: flex;
+  align-items: center; /* Alignement vertical centré */
+}
+
+.cours-details p svg {
+  margin-right: 10px; /* Espace à droite de l'icône */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Médias pour la réactivité */
+@media (max-width: 768px) {
+  .image-cards {
+    flex-direction: column; /* Une colonne sur petits écrans */
+  }
+
+  .image-card {
+    flex: 1 1 100%; /* Prend toute la largeur sur petits écrans */
+  }
+}
+
+
+/* Conteneur principal */
+.cours-container {
+  max-width: 1400px; /* Augmentez la largeur maximale */
+  margin: auto;
+  padding: 50px; /* Ajoutez plus de padding pour donner plus d'espace à l'intérieur */
+  background-color: white; /* Couleur de fond blanche */
+  border-radius: 10px; /* Coins arrondis pour un style plus doux */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre portée plus marquée */
+}
+
+/* Exemple de modification des tailles de police */
+.cours-title {
+  font-size: 3.5rem; /* Augmenter la taille du titre */
+}
+
+.cours-subtitle, .section-title {
+  font-size: 2.5rem; /* Augmenter la taille du sous-titre */
+}
+
+.cours-introduction {
+  font-size: 1.5rem; /* Augmenter la taille du texte d'introduction */
+}
